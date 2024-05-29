@@ -1,76 +1,40 @@
-# Nuxt 3 Minimal Starter
+# Letsflix Movie App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a movie app built with Nuxt.js, Tailwind CSS, and Font Awesome. It uses the TMDB API to fetch movie data.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Browse movies by category
+- Search for movies/series
+- View movie/series details
+
+## Technologies Used
+
+- [Nuxt.js](https://nuxtjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)
+
+## Getting Started
+
+1. Clone the repository:
 
 ```bash
-# npm
+git clone https://github.com/PS213073/Letsflix.git
+cd movie-app
+```
+2. Install dependencies:
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+3. Create a .env file in the root directory and add your TMDB API key:
 ```bash
-# npm
+echo "AccessToken=your_tmdb_api_key" > .env
+```
+
+4. Start the development server:
+```bash
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# Letsflix
+5. The app will be available at http://localhost:3000.
