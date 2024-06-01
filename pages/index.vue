@@ -13,32 +13,41 @@
       :duration="bannerData.runtime ? `${bannerData.runtime} min` : 'N/A'"
       :description="bannerData.overview"
     />
-
-    <MoviesCarousel title="Popular Movies" apiEndpoint="/api/movies/discover" />
-    <SeriesCarousel
-      title="Popular Tv Shows"
-      apiEndpoint="/api/movies/discover"
+    <MoviesCarousel
+      v-if="moviesData"
+      title="Popular Movies"
+      :movies="moviesData"
     />
+    <SeriesCarousel
+      v-if="seriesData"
+      title="Popular TV Shows"
+      :series="seriesData"
+    />
+    <div v-else class="text-center text-white">Loading...</div>
   </div>
 </template>
 
 <script setup>
-const bannerData = ref(null);
-const movieId = "823464"; // Replace with the specific movie ID you want to show
+const movieId = "823464";
 
-const fetchBannerData = async () => {
-  try {
-    const response = await fetch(`/api/movies/${movieId}`);
-    const data = await response.json();
-    bannerData.value = data;
-  } catch (error) {
-    console.error("Error fetching banner data:", error);
-  }
-};
+const { data: bannerData, error: bannerError } = await useAsyncData(
+  "bannerData",
+  () => $fetch(`/api/movies/${movieId}`)
+);
+const { data: moviesSeriesData, error: moviesSeriesError } = await useAsyncData(
+  "moviesSeriesData",
+  () => $fetch("/api/movies/discover")
+);
 
-onMounted(() => {
-  fetchBannerData();
-});
+if (bannerError.value || moviesSeriesError.value) {
+  console.error(
+    "Error fetching data:",
+    bannerError.value || moviesSeriesError.value
+  );
+}
+
+const moviesData = moviesSeriesData.value?.movies.results || [];
+const seriesData = moviesSeriesData.value?.series.results || [];
 </script>
 
 <style>

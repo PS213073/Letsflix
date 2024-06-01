@@ -2,9 +2,6 @@
   <div class="container mx-auto px-4 py-8 relative">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-2xl font-semibold text-white">{{ title }}</h2>
-      <a href="#" class="text-gray-400 hover:text-white transition">
-        Explore more
-      </a>
     </div>
     <div class="relative">
       <button
@@ -41,41 +38,13 @@
   </div>
 </template>
   
-  <script setup>
-import { ref, onMounted, watch } from "vue";
-
+<script setup>
 const carousel = ref(null);
 
 const props = defineProps({
   title: String,
-  apiEndpoint: String,
+  series: Array,
 });
-
-const title = ref(props.title);
-const series = ref([]);
-
-const fetchSeries = async () => {
-  const { data, error } = await useFetch(props.apiEndpoint, {
-    transform: (response) => {
-      if (response.series) {
-        return response.series.results;
-      } else if (response.topRatedSeries) {
-        return [...response.topRatedSeries.results];
-      }
-      return [];
-    },
-  });
-
-  if (error.value) {
-    console.error("Failed to fetch series:", error.value);
-    return;
-  }
-
-  series.value = data.value;
-};
-
-onMounted(fetchSeries);
-watch(() => props.apiEndpoint, fetchSeries);
 
 const scrollLeft = () => {
   carousel.value.scrollBy({ left: -300, behavior: "smooth" });

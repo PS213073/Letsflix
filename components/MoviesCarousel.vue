@@ -2,11 +2,6 @@
   <div class="container mx-auto px-4 py-8 relative">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-2xl font-semibold text-white">{{ title }}</h2>
-      <!-- <NuxtLink
-        :to="`/explore`"
-        class="text-gray-400 hover:text-white transition"
-        >Explore more</NuxtLink
-      > -->
     </div>
     <div class="relative">
       <button
@@ -49,41 +44,8 @@ const carousel = ref(null);
 
 const props = defineProps({
   title: String,
-  apiEndpoint: String,
+  movies: Array,
 });
-
-const title = ref(props.title);
-const movies = ref([]);
-const fetchMovies = async () => {
-  const { data, error } = await useFetch(() => props.apiEndpoint, {
-    transform: (response) => {
-      // Check if the response has 'movies' property and use it
-      if (response.movies) {
-        return response.movies.results;
-      }
-      // Otherwise, check for 'topRatedMovies' and 'topRatedSeries'
-      else if (response.topRatedMovies) {
-        return [...response.topRatedMovies.results];
-      } else if (response.nowPlayingMovies) {
-        return [...response.nowPlayingMovies.results];
-      } else if (response.upcoming) {
-        return [...response.upcoming.results];
-      }
-      return [];
-    },
-  });
-
-  if (error.value) {
-    console.error("Failed to fetch movies:", error.value);
-    return;
-  }
-
-  movies.value = data.value;
-};
-
-onMounted(fetchMovies);
-
-watch(() => props.apiEndpoint, fetchMovies);
 
 const scrollLeft = () => {
   carousel.value.scrollBy({ left: -300, behavior: "smooth" });

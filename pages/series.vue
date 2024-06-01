@@ -6,27 +6,19 @@
       :title="bannerData.name"
       :rating="bannerData.vote_average"
       :reviews="bannerData.vote_count"
-      :year="
-        bannerData.first_air_date ? bannerData.first_air_date : 'N/A'
-      "      
+      :year="bannerData.first_air_date ? bannerData.first_air_date : 'N/A'"
       :description="bannerData.overview"
     />
 
     <SeriesCarousel
+      v-if="popularSeries"
       title="Popular Tv Shows"
-      apiEndpoint="/api/movies/discover"
+      :series="popularSeries"
     />
-    <!-- <MoviesCarousel
-      title="Upcoming Movies"
-      apiEndpoint="/api/movies/upcoming"
-    />
-    <MoviesCarousel
-      title="Now Playing Movies"
-      apiEndpoint="/api/movies/nowplaying"
-    /> -->
     <SeriesCarousel
+      v-if="popularSeries"
       title="Top Rated Tv Shows"
-      apiEndpoint="/api/movies/toprated"
+      :series="topRatedSeries"
     />
   </div>
 </template>
@@ -49,5 +41,15 @@ onMounted(() => {
   fetchBannerData();
 });
 
-console.log(bannerData);
+const { data: popularSeriesData } = await useAsyncData(
+  "popularSeriesData",
+  () => $fetch("/api/movies/discover")
+);
+const popularSeries = popularSeriesData.value?.series.results || [];
+
+const { data: topRatedSeriesData } = await useAsyncData(
+  "topRatedSeriesData",
+  () => $fetch("/api/movies/toprated")
+);
+const topRatedSeries = topRatedSeriesData.value?.topRatedSeries.results || [];
 </script>
