@@ -25,7 +25,7 @@
 
 <script setup>
 const bannerData = ref(null);
-const seriesId = "1429"; // Replace with the specific series ID you want to show
+const seriesId = "1429";
 
 const fetchBannerData = async () => {
   try {

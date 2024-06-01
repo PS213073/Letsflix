@@ -1,10 +1,10 @@
 <template>
   <div class="relative mb-8">
-    <div class="relative h-[25rem] overflow-hidden">
+    <div class="relative h-[40rem] overflow-hidden">
       <img
         :src="`${imageSiteUrl}${backdrop_path}`"
         :alt="title"
-        class="absolute inset-0 shadow-lg object-center"
+        class="absolute inset-0 shadow-lg w-full h-[110vh] object-cover"
       />
     </div>
 
@@ -14,7 +14,9 @@
       <div class="text-white">
         <h1 class="text-4xl font-bold mb-2">{{ title }}</h1>
         <div class="flex items-center mb-4">
-          <span class="text-green-400 text-lg mr-2">{{ rating.toFixed(2) }}</span>
+          <span class="text-green-400 text-lg mr-2">{{
+            rating.toFixed(2)
+          }}</span>
           <span class="text-sm text-gray-400">
             • {{ reviews }} Reviews • {{ year }} • {{ duration }}
           </span>

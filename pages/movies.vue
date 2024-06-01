@@ -38,6 +38,7 @@
 
 <script setup>
 const bannerData = ref(null);
+const movieId = "823464";
 
 const fetchBannerData = async () => {
   try {
@@ -48,10 +49,6 @@ const fetchBannerData = async () => {
     console.error("Error fetching banner data:", error);
   }
 };
-
-onMounted(() => {
-  fetchBannerData();
-});
 
 const { data: popularMoviesData } = await useAsyncData(
   "popularMoviesData",
@@ -77,6 +74,10 @@ const { data: topRatedMoviesData } = await useAsyncData(
   () => $fetch("/api/movies/toprated")
 );
 const topRatedMovies = topRatedMoviesData.value?.topRatedMovies.results || [];
+
+onMounted(() => {
+  fetchBannerData();
+});
 </script>
 
 

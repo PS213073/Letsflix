@@ -6,7 +6,7 @@
     <div class="relative">
       <button
         @click="scrollLeft"
-        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-2 rounded-full focus:outline-none z-10 hover:h-full"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-2 w-11 focus:outline-none z-10 h-full opacity-0 hover:opacity-100"
       >
         &lt;
       </button>
@@ -30,7 +30,7 @@
       </div>
       <button
         @click="scrollRight"
-        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-2 rounded-full focus:outline-none z-10 hover:h-full"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-2 w-11 focus:outline-none z-10 h-full opacity-0 hover:opacity-100"
       >
         &gt;
       </button>
