@@ -1,9 +1,11 @@
 <template>
   <div class="relative w-full h-[30rem] lg:max-w-[67.35rem] bg-black">
     <div class="absolute top-0 right-0 w-full h-full lg:left-1/3 lg:bottom-0">
-      <NuxtImg 
-        :src="`${imageSiteUrl}${backdrop_path}`"
+      <NuxtImg
+        :src="`${imageSiteUrl}/w780${backdrop_path}`"
         :alt="title"
+        :srcset="generateSrcset(backdrop_path)"
+        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
         class="w-full h-full object-cover"
       />
     </div>
@@ -45,7 +47,7 @@
 </template>
 
 <script setup>
-const imageSiteUrl = "https://image.tmdb.org/t/p/original";
+const imageSiteUrl = "https://image.tmdb.org/t/p";
 
 defineProps({
   backdrop_path: String,
@@ -58,5 +60,8 @@ defineProps({
   trailer: Boolean,
 });
 
+// Function to generate the srcset attribute
+const generateSrcset = (path) => {
+  return `${imageSiteUrl}/w300${path} 300w, ${imageSiteUrl}/w780${path} 780w, ${imageSiteUrl}/w1280${path} 1280w, ${imageSiteUrl}/original${path} 2000w`;
+};
 </script>
-
