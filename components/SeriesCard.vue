@@ -3,7 +3,7 @@
     <div
       class="w-60 flex-shrink-0 bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col"
     >
-      <img
+      <NuxtImg 
         :src="`${imageSiteUrl}${poster_path}`"
         :alt="name"
         class="w-full h-96 object-cover"

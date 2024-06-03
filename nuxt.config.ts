@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vesp/nuxt-fontawesome',
     "@nuxtjs/sitemap",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    "@nuxt/image"
   ],
   fontawesome: {
     icons: {

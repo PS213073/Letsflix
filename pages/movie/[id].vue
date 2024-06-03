@@ -18,7 +18,7 @@
         Overview
       </h1>
       <div class="flex flex-col md:flex-row items-center md:items-start">
-        <img
+        <NuxtImg 
           :src="
             movieDetails.poster_path
               ? `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`

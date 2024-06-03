@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full h-[30rem] lg:max-w-[67.35rem] bg-black">
     <div class="absolute top-0 right-0 w-full h-full lg:left-1/3 lg:bottom-0">
-      <img
+      <NuxtImg 
         :src="`${imageSiteUrl}${backdrop_path}`"
         :alt="title"
         class="w-full h-full object-cover"

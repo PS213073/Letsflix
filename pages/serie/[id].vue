@@ -16,7 +16,7 @@
         Overview
       </h1>
       <div class="flex flex-col gap-10 md:flex-row items-center md:items-start">
-        <img
+        <NuxtImg 
           :src="
             seriesDetails.poster_path
               ? `https://image.tmdb.org/t/p/w500${seriesDetails.poster_path}`
