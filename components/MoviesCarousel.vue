@@ -56,7 +56,7 @@ const scrollRight = () => {
 };
 </script>
 
-<style>
+<!-- <style>
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -64,7 +64,7 @@ const scrollRight = () => {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-</style>
+</style> -->
 
 
 

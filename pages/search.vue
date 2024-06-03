@@ -38,7 +38,9 @@
       >
         Movie Results
       </h1>
-      <ul class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <ul
+        class="grid justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5"
+      >
         <li v-for="mov in movies" :key="mov.id">
           <MovieCard
             :poster_path="mov.poster_path"
@@ -60,7 +62,7 @@
         TV Series Results
       </h1>
       <ul
-        class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        class="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
       >
         <li v-for="tvSeries in series" :key="tvSeries.id">
           <SeriesCard

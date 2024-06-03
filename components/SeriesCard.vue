@@ -9,9 +9,7 @@
         class="w-full h-96 object-cover"
       />
       <div class="p-4 flex flex-col flex-grow">
-        <h3
-          class="text-lg font-semibold text-white mb-2 line-clamp-2 flex-grow"
-        >
+        <h3 class="text-lg font-semibold text-white mb-2 truncate flex-grow">
           {{ name }}
         </h3>
       </div>
@@ -38,13 +36,3 @@ const changeItemState = (item) => {
   // console.log(itemState.value); // Check if the item state is being set correctly
 };
 </script>
-
-
-<style scoped>
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-</style>

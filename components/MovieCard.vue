@@ -10,7 +10,7 @@
       />
       <div class="p-4 flex flex-col flex-grow">
         <h3
-          class="text-lg font-semibold text-white mb-2 line-clamp-2 flex-grow"
+          class="text-lg font-semibold text-white mb-2 truncate flex-grow"
         >
           {{ title }}
         </h3>
@@ -37,13 +37,4 @@ const changeItemState = (item) => {
   itemState.value = item;
 };
 </script>
-
-<style scoped>
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-</style>
   

@@ -11,12 +11,11 @@
       class="absolute bottom-0 md:left-0 md:top-0 flex flex-col justify-center px-10 bg-gradient-to-t from-black via-black to-transparent lg:bg-gradient-to-r lg:px-25 lg:w-2/3"
     >
       <div>
-        <h1 class="mt-2 text-4xl lg:text-5xl line-clamp-2 leading-relaxed">
+        <h1 class="mt-2 text-5xl lg:text-5xl line-clamp-2 leading-relaxed">
           {{ title }}
         </h1>
         <div class="flex flex-row flex-wrap gap-2 items-center mt-4">
           <div class="flex items-center gap-1">
-            <div class="w-25 h-4 bg-yellow-500 rounded"></div>
             <div class="text-gray-400">{{ rating.toFixed(2) }}</div>
           </div>
           <span class="text-gray-400 md:block">·</span>
