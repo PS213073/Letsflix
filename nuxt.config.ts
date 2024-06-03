@@ -15,5 +15,19 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     AccessToken: process.env.AccessToken
-  },  
+  },
+  app: {
+    head: {
+      title: 'Lets Flix',
+      meta: [
+        {
+          content: "In this app you will find movies and series and their details"
+        }
+      ]
+    },
+  },
+
+  site: {
+    url: 'http://localhost:3000/'
+  },
 })
