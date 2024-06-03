@@ -17,7 +17,7 @@
       >
         Overview
       </h1>
-      <div class="flex flex-col gap-10 md:flex-row items-center md:items-start">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
         <img
           :src="
             movieDetails.poster_path

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
   fontawesome: {
     icons: {
-      solid: ['house', 'film', 'tv', 'search'],
+      solid: ['house', 'film', 'tv', 'search', 'play'],
     }
 
   },

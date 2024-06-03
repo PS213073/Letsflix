@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed h-20 w-screen bottom-0 bg-slate-950 md:h-screen md:w-20 z-10">
+  <div class="fixed h-20 w-screen bottom-0 bg-slate-950 md:h-screen md:w-20 z-50">
     <div class="h-full flex items-center justify-center">
       <ul class="flex flex-row justify-around space-x-28 md:space-x-0 md:flex-col md:justify-between items-center md:space-y-32 space-y-0">
         <li>

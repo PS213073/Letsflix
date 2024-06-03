@@ -1,34 +1,45 @@
 <template>
-  <div class="relative mb-8">
-    <div class="relative h-[40rem] overflow-hidden">
+  <div class="relative w-full h-[30rem] lg:max-w-[67.35rem] bg-black">
+    <div class="absolute top-0 right-0 w-full h-full lg:left-1/3 lg:bottom-0">
       <img
         :src="`${imageSiteUrl}${backdrop_path}`"
         :alt="title"
-        class="absolute inset-0 shadow-lg w-full h-[110vh] object-cover"
+        class="w-full h-full object-cover"
       />
     </div>
-
     <div
-      class="absolute inset-0 gradient-overlay flex flex-col md:flex-row items-center p-8"
+      class="absolute bottom-0 md:left-0 md:top-0 flex flex-col justify-center px-10 bg-gradient-to-t from-black via-black to-transparent lg:bg-gradient-to-r lg:px-25 lg:w-2/3"
     >
-      <div class="text-white">
-        <h1 class="text-4xl font-bold mb-2">{{ title }}</h1>
-        <div class="flex items-center mb-4">
-          <span class="text-green-400 text-lg mr-2">{{
-            rating.toFixed(2)
-          }}</span>
-          <span class="text-sm text-gray-400">
-            • {{ reviews }} Reviews • {{ year }} • {{ duration }}
-          </span>
+      <div>
+        <h1 class="mt-2 text-4xl lg:text-5xl line-clamp-2 leading-relaxed">
+          {{ title }}
+        </h1>
+        <div class="flex flex-row flex-wrap gap-2 items-center mt-4">
+          <div class="flex items-center gap-1">
+            <div class="w-25 h-4 bg-yellow-500 rounded"></div>
+            <div class="text-gray-400">{{ rating.toFixed(2) }}</div>
+          </div>
+          <span class="text-gray-400 md:block">·</span>
+          <div class="text-gray-400 md:block">{{ reviews }} Reviews</div>
+          <span class="text-gray-400 md:block">·</span>
+          <div class="text-gray-400 md:block">{{ year }}</div>
+          <span v-if="duration" class="text-gray-400">·</span>
+          <div v-if="duration" class="text-gray-400">{{ duration }}</div>
         </div>
-        <div class="md:w-1/2">
-          <p class="text-gray-300 mb-4 truncate-3-lines">{{ description }}</p>
-        </div>
-        <a
-          href="#"
-          class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
-          >Watch Trailer</a
+        <p
+          class="mt-2 text-gray-300 leading-relaxed line-clamp-3 md:line-clamp-5 text-xs md:text-base"
         >
+          {{ description }}
+        </p>
+        <div class="py-5 lg:block">
+          <button
+            class="flex items-center gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white transition rounded"
+            @click="playTrailer"
+          >
+            <font-awesome icon="play" />
+            Watch Trailer
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -45,25 +56,36 @@ defineProps({
   year: Number,
   duration: String,
   description: String,
+  trailer: Boolean,
 });
+
+// const playTrailer = () => {
+//   // Logic to play the trailer
+// };
 </script>
 
 <style>
-.truncate-3-lines {
+.icon-play::before {
+  content: "\f04b"; /* Unicode for play icon */
+  font-family: "FontAwesome";
+}
+
+.icon-play-circle::before {
+  content: "\f144"; /* Unicode for play circle icon */
+  font-family: "FontAwesome";
+}
+
+.line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.gradient-overlay {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0)
-  );
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>
