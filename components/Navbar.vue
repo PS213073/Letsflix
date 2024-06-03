@@ -5,7 +5,7 @@
         class="flex flex-row justify-around w-full px-4 md:space-x-0 md:flex-col md:justify-between items-center md:space-y-32 space-y-0"
       >
         <li>
-          <NuxtLink to="/">
+          <NuxtLink to="/" alt="home">
             <font-awesome
               icon="house"
               alt="home"
@@ -15,7 +15,7 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/movies">
+          <NuxtLink to="/movies" alt="movies">
             <font-awesome
               icon="film"
               alt="movies"
@@ -27,7 +27,7 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/series">
+          <NuxtLink to="/series" alt="series">
             <font-awesome
               icon="tv"
               alt="series"
@@ -39,7 +39,7 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/search">
+          <NuxtLink to="/search" alt="search">
             <font-awesome
               icon="search"
               alt="search"
