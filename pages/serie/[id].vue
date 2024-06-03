@@ -66,6 +66,24 @@ const { data: seriesDetails } = await useFetch(
   `/api/series/${route.params.id}`
 );
 // console.log(seriesDetails.value);
+
+useHead({
+  meta: [
+    { name: "description", content: seriesDetails.value.overview },
+    { property: "og:title", content: seriesDetails.value.name },
+    { property: "og:description", content: seriesDetails.value.overview },
+    {
+      property: "og:image",
+      content: `https://image.tmdb.org/t/p/w500${seriesDetails.value.poster_path}`,
+    },
+    { property: "twitter:name", content: seriesDetails.value.name },
+    { property: "twitter:description", content: seriesDetails.value.overview },
+    {
+      property: "twitter:image",
+      content: `https://image.tmdb.org/t/p/w500${seriesDetails.value.poster_path}`,
+    },
+  ],
+});
 </script>
 
 <style scoped>

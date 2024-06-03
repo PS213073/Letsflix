@@ -11,7 +11,7 @@
       class="absolute bottom-0 md:left-0 md:top-0 flex flex-col justify-center px-10 bg-gradient-to-t from-black via-black to-transparent lg:bg-gradient-to-r lg:px-25 lg:w-2/3"
     >
       <div>
-        <h1 class="mt-2 text-5xl lg:text-5xl line-clamp-2 leading-relaxed">
+        <h1 class="mt-2 text-5xl lg:text-5xl leading-relaxed mb-4">
           {{ title }}
         </h1>
         <div class="flex flex-row flex-wrap gap-2 items-center mt-4">
@@ -63,28 +63,3 @@ defineProps({
 // };
 </script>
 
-<style>
-.icon-play::before {
-  content: "\f04b"; /* Unicode for play icon */
-  font-family: "FontAwesome";
-}
-
-.icon-play-circle::before {
-  content: "\f144"; /* Unicode for play circle icon */
-  font-family: "FontAwesome";
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-5 {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>

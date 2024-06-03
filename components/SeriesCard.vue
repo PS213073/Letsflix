@@ -35,4 +35,5 @@ const changeItemState = (item) => {
   itemState.value = item;
   // console.log(itemState.value); // Check if the item state is being set correctly
 };
+
 </script>
