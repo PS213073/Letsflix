@@ -58,8 +58,5 @@ defineProps({
   trailer: Boolean,
 });
 
-// const playTrailer = () => {
-//   // Logic to play the trailer
-// };
 </script>
 
