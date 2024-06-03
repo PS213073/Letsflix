@@ -2,17 +2,27 @@
   <footer class="bg-gray-900 text-gray-400 pt-8 pb-28 pl-10 md:pl-16">
     <div class="container mx-auto px-4 flex flex-col gap-y-5">
       <div class="flex items-center space-x-2">
-        <NuxtImg  src="/movies.png" alt="Letsflix Logo" class="h-8 w-8" />
+        <NuxtImg
+          src="/movies.png"
+          alt="Letsflix Logo"
+          class="h-8 w-8"
+          loading="lazy"
+        />
         <span class="text-xl font-semibold text-white">Let's Flix</span>
       </div>
       <div class="flex flex-col space-y-5">
         <div class="flex items-center space-x-1">
           <span>Made with</span>
-          <NuxtImg  src="/nuxt.png" alt="Nuxt Icon" class="h-5" />
+          <NuxtImg src="/nuxt.png" alt="Nuxt Icon" class="h-5" loading="lazy" />
         </div>
         <div class="flex items-center space-x-1">
           <span>Data provided by</span>
-          <NuxtImg  src="/tmdb2.svg" alt="TMDB Logo" class="h-5 w-20" />
+          <NuxtImg
+            src="/tmdb2.svg"
+            alt="TMDB Logo"
+            class="h-5 w-20"
+            loading="lazy"
+          />
         </div>
         <span
           >This project uses the TMDB API but is not endorsed or certified by
@@ -21,17 +31,32 @@
       </div>
       <div class="flex items-center space-x-4">
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <NuxtImg  src="/twitter.svg" alt="Twitter" class="h-6 w-6" />
+          <NuxtImg
+            src="/twitter.svg"
+            alt="Twitter"
+            class="h-6 w-6"
+            loading="lazy"
+          />
         </a>
         <a
           href="https://github.com/PS213073/Letsflix"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <NuxtImg  src="/github.svg" alt="GitHub" class="h-6 w-6" />
+          <NuxtImg
+            src="/github.svg"
+            alt="GitHub"
+            class="h-6 w-6"
+            loading="lazy"
+          />
         </a>
         <div class="flex items-center space-x-1">
-          <NuxtImg  src="/vercel.svg" alt="Vercel Logo" class="h-7" />
+          <NuxtImg
+            src="/vercel.svg"
+            alt="Vercel Logo"
+            class="h-7"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
