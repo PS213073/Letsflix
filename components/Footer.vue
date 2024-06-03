@@ -2,7 +2,7 @@
   <footer class="bg-gray-900 text-gray-400 pt-8 pb-28 pl-10 md:pl-16">
     <div class="container mx-auto px-4 flex flex-col gap-y-5">
       <div class="flex items-center space-x-2">
-        <img src="/Movies.png" alt="Nuxt Logo" class="h-8 w-8" />
+        <img src="/movies.png" alt="Letsflix Logo" class="h-8 w-8" />
         <span class="text-xl font-semibold text-white">Let's Flix</span>
       </div>
       <div class="flex flex-col space-y-5">
