@@ -13,7 +13,7 @@
       class="absolute bottom-0 md:left-0 md:top-0 flex flex-col justify-center px-10 bg-gradient-to-t from-black via-black to-transparent lg:bg-gradient-to-r lg:px-25 lg:w-2/3"
     >
       <div>
-        <h1 class="mt-2 text-5xl lg:text-5xl leading-relaxed mb-4">
+        <h1 class="mt-2 text-5xl lg:text-5xl">
           {{ title }}
         </h1>
         <div class="flex flex-row flex-wrap gap-2 items-center mt-4">
