@@ -23,7 +23,7 @@
               : '/poster.jpg'
           "
           class="w-full md:w-1/3 rounded-lg shadow-lg mb-4 md:mb-0 md:mr-4"
-          loading="lazy"
+          
         />
         <div class="md:w-2/3 mt-10">
           <h2 class="text-3xl font-semibold mb-4">{{ seriesDetails.name }}</h2>

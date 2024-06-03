@@ -11,7 +11,6 @@
         :srcset="poster_path ? generateSrcset(poster_path) : ''"
         sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
         class="w-full h-96 object-cover"
-        loading="lazy"
       />
       <div class="p-4 flex flex-col flex-grow">
         <h3 class="text-lg font-semibold text-white mb-2 truncate flex-grow">
