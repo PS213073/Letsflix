@@ -28,7 +28,7 @@
           <div v-if="duration" class="text-gray-400">{{ duration }}</div>
         </div>
         <p
-          class="mt-2 text-gray-300 leading-relaxed line-clamp-3 md:line-clamp-5 text-xs md:text-base"
+          class="mt-2 text-gray-300 leading-relaxed line-clamp-3 text-xs md:text-base"
         >
           {{ description }}
         </p>
@@ -65,3 +65,13 @@ const generateSrcset = (path) => {
   return `${imageSiteUrl}/w300${path} 300w, ${imageSiteUrl}/w780${path} 780w, ${imageSiteUrl}/w1280${path} 1280w, ${imageSiteUrl}/original${path} 2000w`;
 };
 </script>
+
+
+<style>
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
