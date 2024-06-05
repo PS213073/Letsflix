@@ -48,6 +48,17 @@ if (bannerError.value || moviesSeriesError.value) {
 
 const moviesData = moviesSeriesData.value?.movies.results || [];
 const seriesData = moviesSeriesData.value?.series.results || [];
+
+useHead({
+  title: "Lets Flix Movies en Series App",
+  htmlAttrs: {
+    lang: "en",
+  },
+  meta: [
+    { name: "description", content: "Lets Flix is a comprehensive platform for movie and series enthusiasts." },
+   
+  ],
+});
 </script>
 
 <style>

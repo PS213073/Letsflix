@@ -22,9 +22,14 @@ export default defineNuxtConfig({
       title: 'Lets Flix',
       meta: [
         {
-          content: "In this app you will find movies and series and their details"
+          hid: 'description',
+          name: 'description',
+          content: "Lets Flix is a comprehensive platform for movie and series enthusiasts."
         }
-      ]
+      ],
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
 

@@ -16,14 +16,13 @@
         Overview
       </h1>
       <div class="flex flex-col gap-10 md:flex-row items-center md:items-start">
-        <NuxtImg 
+        <NuxtImg
           :src="
             seriesDetails.poster_path
               ? `https://image.tmdb.org/t/p/w500${seriesDetails.poster_path}`
               : '/poster.jpg'
           "
           class="w-full md:w-1/3 rounded-lg shadow-lg mb-4 md:mb-0 md:mr-4"
-          
         />
         <div class="md:w-2/3 mt-10">
           <h2 class="text-3xl font-semibold mb-4">{{ seriesDetails.name }}</h2>
@@ -69,6 +68,10 @@ const { data: seriesDetails } = await useFetch(
 // console.log(seriesDetails.value);
 
 useHead({
+  title: seriesDetails.value.name,
+  htmlAttrs: {
+    lang: "en",
+  },
   meta: [
     { name: "description", content: seriesDetails.value.overview },
     { property: "og:title", content: seriesDetails.value.name },
@@ -77,7 +80,7 @@ useHead({
       property: "og:image",
       content: `https://image.tmdb.org/t/p/w500${seriesDetails.value.poster_path}`,
     },
-    { property: "twitter:name", content: seriesDetails.value.name },
+    { property: "twitter:name", content: seriesDetails.value.title },
     { property: "twitter:description", content: seriesDetails.value.overview },
     {
       property: "twitter:image",

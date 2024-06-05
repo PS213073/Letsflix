@@ -18,7 +18,7 @@
         Overview
       </h1>
       <div class="flex flex-col md:flex-row items-center md:items-start">
-        <NuxtImg 
+        <NuxtImg
           :src="
             movieDetails.poster_path
               ? `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`
@@ -56,6 +56,10 @@ const { data: movieDetails } = await useFetch(`/api/movies/${route.params.id}`);
 
 // Set the meta tags and title dynamically
 useHead({
+  title: movieDetails.value.title,
+  htmlAttrs: {
+    lang: "en",
+  },
   meta: [
     { name: "description", content: movieDetails.value.overview },
     { property: "og:title", content: movieDetails.value.title },
