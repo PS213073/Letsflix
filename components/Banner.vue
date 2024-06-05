@@ -2,10 +2,8 @@
   <div class="relative w-full h-[30rem] lg:max-w-[67.35rem] bg-black">
     <div class="absolute top-0 right-0 w-full h-full lg:left-1/3 lg:bottom-0">
       <NuxtImg
-        :src="`${imageSiteUrl}/w780${backdrop_path}`"
+        :src="`${imageSiteUrl}/original/${backdrop_path}`"
         :alt="title"
-        :srcset="generateSrcset(backdrop_path)"
-        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
         class="w-full h-full object-cover"
       />
     </div>
@@ -57,11 +55,6 @@ defineProps({
   duration: String,
   description: String,
 });
-
-// Function to generate the srcset attribute
-const generateSrcset = (path) => {
-  return `${imageSiteUrl}/w300${path} 300w, ${imageSiteUrl}/w780${path} 780w, ${imageSiteUrl}/w1280${path} 1280w, ${imageSiteUrl}/original${path} 2000w`;
-};
 </script>
 
 
