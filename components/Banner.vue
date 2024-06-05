@@ -35,7 +35,6 @@
         <div class="py-5 lg:block">
           <button
             class="flex items-center gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white transition rounded"
-            @click="playTrailer"
           >
             <font-awesome icon="play" />
             Watch Trailer
@@ -57,7 +56,6 @@ defineProps({
   year: Number,
   duration: String,
   description: String,
-  trailer: Boolean,
 });
 
 // Function to generate the srcset attribute
