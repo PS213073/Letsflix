@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Lets Flix',
+      title: 'Lets Flix Movies en Series App',
       meta: [
         {
           hid: 'description',
