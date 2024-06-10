@@ -51,7 +51,7 @@ defineProps({
   title: String,
   rating: Number,
   reviews: Number,
-  year: Number,
+  year: String,
   duration: String,
   description: String,
 });
