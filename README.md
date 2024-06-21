@@ -2,6 +2,12 @@
 
 This is a movie app built with Nuxt.js, Tailwind CSS, and Font Awesome. It uses the TMDB API to fetch movie data. The app is deployed on [Vercel](https://vercel.com/). It was inspired by [movies.nuxt.space](https://movies.nuxt.space/).
 
+# Screenshots
+![home](https://github.com/PS213073/Letsflix/assets/107118950/a90e9b70-fe9e-489f-9d9a-9c7ca10d6752)
+![movies](https://github.com/PS213073/Letsflix/assets/107118950/16295806-e8ee-4647-a565-3604a8618d6e)
+![search](https://github.com/PS213073/Letsflix/assets/107118950/ac64b0b2-25ca-4672-9b0c-3218f1b920b6)
+![series](https://github.com/PS213073/Letsflix/assets/107118950/fb71012d-4cb9-413e-9144-2b8cf5274c77)
+
 ## Features
 
 - Browse movies by category
