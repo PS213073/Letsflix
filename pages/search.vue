@@ -39,7 +39,7 @@
         Movie Results
       </h1>
       <ul
-        class="grid justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5"
+        class="grid justify-items-center space-y-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
       >
         <li v-for="mov in movies" :key="mov.id">
           <MovieCard
